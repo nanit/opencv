@@ -118,13 +118,6 @@ void groupRectangles(vector<Rect>& rectList, int groupThreshold, double eps, vec
 {
     if( groupThreshold <= 0 || rectList.empty() )
     {
-        if( weights )
-        {
-            size_t i, sz = rectList.size();
-            weights->resize(sz);
-            for( i = 0; i < sz; i++ )
-                (*weights)[i] = 1;
-        }
         return;
     }
 
